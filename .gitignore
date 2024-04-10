@@ -143,3 +143,4 @@ fabric.properties
 *.png
 *.ucls
 .classpath
+*.zip
