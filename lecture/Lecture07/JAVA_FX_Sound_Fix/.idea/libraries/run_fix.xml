@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="run_fix">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/run_fix.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
