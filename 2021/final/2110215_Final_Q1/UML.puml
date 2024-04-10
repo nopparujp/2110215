@@ -1,0 +1,42 @@
+@startuml
+class Gambler {
++ String toString()
++ void preRoundActs(GameAction)
++ void preTurnActs(GameAction)
+}
+class Master {
++ void preRoundActs(GameAction)
++ String toString()
+}
+class Ordinary {
++ String toString()
+}
+interface PreRoundActable {
++ {abstract}void preRoundActs(GameAction)
+}
+abstract class Role {
+- Card cardInHand
++ Card getCardInHand()
++ void picksUpCard(Card)
++ void dumpsCard()
++ int getRewards()
++ {abstract}String toString()
+}
+class Seer {
++ void preTurnActs(GameAction)
++ String toString()
+}
+interface PreTurnActable {
++ {abstract}void preTurnActs(GameAction)
+}
+
+
+PreTurnActable <|.. Gambler
+PreRoundActable <|.. Gambler
+Role <|-- Gambler
+PreRoundActable <|.. Master
+Role <|-- Master
+Role <|-- Ordinary
+PreTurnActable <|.. Seer
+Role <|-- Seer
+@enduml
